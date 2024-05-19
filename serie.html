@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC - Movies</title>
+    <link rel="icon" href="imagenes/logo.svg">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CSS propio-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Alice&family=Lilita+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Alice&family=Lilita+One&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+            <div class="container-fluid noto-font-bold">
+                <a class="navbar-brand" href="index.html">
+                    <img src="imagenes/logo.svg" alt="Logo" width="36" height="30"
+                        class="d-inline-block align-text-top">
+                    <span class="nav-title">Grupo 9</span>
+                </a>
+                <!-- iconos para mostrar en mobile -->
+                <div class="d-flex nav-mobile">
+                    <div class="fs-5 me-2 ">
+                        <a href="index.html#busqueda">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search nav-icon"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="fs-5 me-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bookmark-fill nav-icon"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2">
+                            </path>
+                        </svg>
+                        </svg>
+                    </div>
+                    <div class="fs-5 me-2 ">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#login" id="icon-login">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                class="bi bi-person-fill nav-icon m-1" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#estrenos">Estrenos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#recomendadas">Recomendadas</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Categorias
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html#series">Series</a></li>
+                                <li><a class="dropdown-item" href="index.html#peliculas">Peliculas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- iconos para mostrar en desktop -->
+                <div class="d-flex nav-desktop">
+                    <div class="fs-5 me-2 ">
+                        <a href="index.html#busqueda">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                class="bi bi-search nav-icon btn-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="fs-5 me-2 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bookmark-fill nav-icon"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2">
+                            </path>
+                        </svg>
+                        </svg>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-success nav-btn" id="btn-login" type="button" data-bs-toggle="modal"
+                        data-bs-target="#login"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            class="bi bi-person-fill nav-icon m-1" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                        </svg>Iniciar Sesión</button>
+
+                </div>
+
+            </div>
+        </nav>
+        <!-- Modal -->
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+
+                        <h1 class="modal-title text-center mb-3" id="login">¡Bienvenido!</h1>
+                        <form class="row g-3">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" required>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" id="password" class="form-control" required>
+                            </div>
+                            <div class="modal-footer-btn">
+                                <button type="submit" class="btn btn-outline-success btn-modal">Entrar</button>
+                                <span>¿Eres nuevo? <a href="registrarse.html"><strong>Crea tu
+                                            cuenta</strong></a></b></span>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="d-flex justify-content-center align-items-center mt-5 movie">
+            <div class="container-movie">
+                <div class="container-movie-data">
+                    <div class="container-movie-title">
+                        <h1 class="noto-font-bold">The Flash</h1>
+                        <span class="card-icon icon-star">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                                class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg> 5 </span>
+                    </div>
+
+                    <div class="container-badges mb-2">
+                        <span class="badge rounded-pill text-badge-light">Drama</span>
+                        <span class="badge rounded-pill text-badge-light">Ciencia Ficción</span>
+                    </div>
+
+                    <span class="card-icon rubik-font-regular">2014 • <svg xmlns="http://www.w3.org/2000/svg" width="13"
+                            height="13" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                        </svg>45 min</span>
+
+                    <div class="container-trailer">
+                        <iframe src="https://www.youtube.com/embed/IgVyroQjZbE?si=hBZn1MQWbKpL5cNx"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+                <div class="container-multimedia">
+
+                    <figure class="figure">
+                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/yZevl2vHQgmosfwUdVNzviIfaWS.jpg"
+                            class="img-fluid rounded " alt="flash">
+                    </figure>
+
+                    <div class="container-trailer">
+
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/IgVyroQjZbE?si=hBZn1MQWbKpL5cNx"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    </div>
+
+                </div>
+
+
+                <div class="container-movie-description">
+                    <ul class="nav nav-pills mb-3 container-tab rubik-font-regular" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" role="tab" aria-controls="pills-home"
+                                aria-selected="true">Sinopsis</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">Comentarios</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-season-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-season" type="button" role="tab" aria-controls="pills-season"
+                                aria-selected="false">Temporadas</a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content rubik-font-regular" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="img-detail">
+                                <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/yZevl2vHQgmosfwUdVNzviIfaWS.jpg"
+                                    class="img-fluid rounded img-mobile" alt="flash">
+                                <span class="p-2 ">Después de derrotar a Reverse Flash de una vez por todas, Barry Allen
+                                    e Iris West-Allen se están reconectando y haciéndose más cercanos que nunca. Pero
+                                    cuando un grupo mortal de pícaros llega a Central City liderado por una nueva y
+                                    poderosa amenaza, Flash y su equipo deben desafiar una vez más probabilidades
+                                    imposibles para salvar el día. Pero a medida que los Rogues son derrotados, un nuevo
+                                    adversario mortal se levanta para desafiar el legado heroico de Barry Allen. Y en su
+                                    mayor batalla hasta el momento, Barry y el Equipo Flash serán llevados al límite
+                                    para salvar Central City por última vez.</span>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade comment" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab" tabindex="0">
+
+                            <form action="">
+
+                                <div class="form-group pt-1 container-comment-input">
+                                    <textarea class="form-control input-comment" id="comment" rows="2"
+                                        placeholder="Escribe un comentario..."></textarea>
+                                    <button type="submit" class="btn-outline-success btn-comment"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
+                                        </svg></button>
+
+                                </div>
+                            </form>
+
+                            <div class="container-comment">
+
+                                <div class="container-comment-avatar">
+                                    <div class="fs-5 me-2 d-flex justify-content-center align-items-center avatar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            class="bi bi-person-fill icon-avatar" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                        </svg>
+                                    </div>
+                                    <div class="avatar-data">
+                                        <h5>user1</h5>
+                                        <span>9 abril 2024</span>
+                                    </div>
+
+                                </div>
+                                <div class="container-comment-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At id ab odio vero
+                                    laudantium explicabo, officiis ullam sunt animi molestiae ad earum, maiores
+                                    sapiente aperiam! Aliquam, vero! Laborum, delectus ducimus.
+
+                                </div>
+
+                            </div>
+
+                            <div class="container-comment">
+
+                                <div class="container-comment-avatar">
+                                    <div class="fs-5 me-2 d-flex justify-content-center align-items-center avatar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            class="bi bi-person-fill icon-avatar" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                        </svg>
+                                    </div>
+                                    <div class="avatar-data">
+                                        <h5>lu23</h5>
+                                        <span>1 abril 2024</span>
+                                    </div>
+
+                                </div>
+                                <div class="container-comment-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At id ab odio vero
+                                    laudantium explicabo, officiis ullam sunt animi molestiae ad earum, maiores
+                                    sapiente aperiam! Aliquam, vero! Laborum, delectus ducimus.
+
+                                </div>
+
+                            </div>
+
+                            <div class="container-comment">
+
+                                <div class="container-comment-avatar">
+                                    <div class="fs-5 me-2 d-flex justify-content-center align-items-center avatar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            class="bi bi-person-fill icon-avatar" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                        </svg>
+                                    </div>
+                                    <div class="avatar-data">
+                                        <h5>ale_56</h5>
+                                        <span>18 marzo 2024</span>
+                                    </div>
+
+                                </div>
+                                <div class="container-comment-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At id ab odio vero
+                                    laudantium explicabo, officiis ullam sunt animi molestiae ad earum, maiores
+                                    sapiente aperiam! Aliquam, vero! Laborum, delectus ducimus.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptates nobis
+                                    dolores repudiandae fugiat fuga rerum est deserunt cumque suscipit, molestiae
+                                    fugit vel aliquid iste, ab adipisci aperiam alias sit.
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- TEMPORADA -->
+                        <div class="tab-pane fade season" id="pills-season" role="tabpanel"
+                            aria-labelledby="pills-season-tab" tabindex="0">
+                            <div class="container d-flex align-items-start">
+                                <img src="https://media.themoviedb.org/t/p/w130_and_h195_bestv2/A3H6pewHfoy2bXmNhvycOe0xzlC.jpg"
+                                    alt="Temporada 1">
+                                <div class="temporada">
+                                    <h3>Temporada 1</h3>
+                                    <div class="d-flex">
+                                        <span class="card-icon icon-star m-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg> 5 </span>
+                                        <span class="card-icon rubik-font-regular">2014 • 23 Episodios</span>
+                                    </div>
+                                    <div class="container-comment-text">Cuando un accidente inesperado en las
+                                        instalaciones del Acelerador de Partículas de STAR Labs golpea a Barry, de
+                                        repente se encuentra cargado con el increíble poder de moverse a súper
+                                        velocidades. Si bien Barry siempre ha sido un héroe en su alma, sus nuevos
+                                        poderes finalmente le han dado la capacidad de actuar como tal. Con la ayuda del
+                                        equipo de investigación de STAR Labs, Barry comienza a probar los límites de sus
+                                        poderes en evolución y a utilizarlos para detener el crimen. Con una
+                                        personalidad ganadora y una sonrisa en su rostro, Barry Allen, también conocido
+                                        como The Flash, finalmente está avanzando en la vida... ¡muy, muy rápido!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container d-flex align-items-start mt-4">
+                                <img src="https://media.themoviedb.org/t/p/w130_and_h195_bestv2/8xWZPVX1cv9V5YD1RPeLj9QZDE9.jpg"
+                                    alt="Temporada 2">
+                                <div class="temporada">
+                                    <h3>Temporada 2</h3>
+                                    <div class="d-flex">
+                                        <span class="card-icon icon-star m-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg> 4 </span>
+                                        <span class="card-icon rubik-font-regular">2015 • 23 Episodios</span>
+                                    </div>
+                                    <div class="container-comment-text">La temporada 2 de The Flash se estrenó el
+                                        6 de octubre de 2015.<br>
+
+                                        Tras los dramáticos acontecimientos de la temporada 1, Team Flash rápidamente
+                                        dirige su atención a una amenaza muy por encima de Central City. Armado con el
+                                        corazón de un héroe y la capacidad de moverse a súper velocidades, ¿podrá Barry
+                                        salvar a su ciudad de una perdición inminente?
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container d-flex align-items-start mt-4">
+                                <img src="https://media.themoviedb.org/t/p/w130_and_h195_bestv2/rN1hgV8Ag3bZmkv33Udm93hIxQp.jpg"
+                                    alt="Temporada 3">
+                                <div class="temporada">
+                                    <h3>Temporada 3</h3>
+                                    <div class="d-flex">
+                                        <span class="card-icon icon-star m-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg> 3 </span>
+                                        <span class="card-icon rubik-font-regular">2016 • 23 Episodios</span>
+                                    </div>
+                                    <div class="container-comment-text">La temporada 3 de The Flash se estrenó el
+                                        4 de octubre de 2016.<br>
+
+                                        El científico forense Barry Allen, también conocido como The Flash, está
+                                        viviendo la vida de sus sueños. Sus padres están vivos. Está saliendo con la
+                                        hermosa e inteligente Iris West. Y puede dar un paso atrás y dejar que el nuevo
+                                        velocista de la ciudad, Kid Flash, intervenga para proteger Central City. Pero
+                                        cuanto mejor es la vida de Barry, más peligrosa se vuelve. Su némesis, Reverse
+                                        Flash, advierte a Barry de graves repercusiones si permanece en el universo
+                                        alternativo de Flashpoint: además de la pérdida de memoria, sus poderes se
+                                        desvanecerán. Cuando ocurre un desastre, Barry debe decidir si continúa su vida
+                                        como Barry Allen o regresa a su universo como The Flash. Mientras Barry lidia
+                                        con su crisis de identidad, él y el equipo de STAR Labs luchan contra las
+                                        amenazas letales del dios de la velocidad, Savitar.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container d-flex align-items-start mt-4">
+                                <img src="https://media.themoviedb.org/t/p/w130_and_h195_bestv2/e6A65vhYFLqgSsMI294ZQi0rQfH.jpg"
+                                    alt="Temporada 4">
+                                <div class="temporada">
+                                    <h3>Temporada 4</h3>
+                                    <div class="d-flex">
+                                        <span class="card-icon icon-star m-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg> 5 </span>
+                                        <span class="card-icon rubik-font-regular">2017 • 23 Episodios</span>
+                                    </div>
+                                    <div class="container-comment-text">La temporada 4 de The Flash se estrenó el
+                                        10 de octubre de 2017.<br>
+
+                                        La misión de Barry Allen, también conocido como The Flash, es una vez más
+                                        proteger Central City de las amenazas metahumanas. Pero con Barry atrapado en
+                                        Speed Force, esta misión recae en su familia: el detective Joe West; su
+                                        prometida Iris West; y Wally West/Kid Flash  y el equipo de STAR Labs: Caitlin
+                                        Snow/Killer Frost, Cisco Ramon/Vibe y el brillante científico Harrison Wells.
+                                        Cuando un poderoso villano amenaza con arrasar la ciudad a menos que aparezca
+                                        Flash, Cisco lo arriesga todo para liberar a Barry. Pero este es sólo el primer
+                                        movimiento en un juego mortal con Clifford DeVoe, también conocido como The
+                                        Thinker, un cerebro que siempre está diez pasos por delante de Barry, sin
+                                        importar qué tan rápido corra Barry.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container d-flex align-items-start mt-4">
+                                <img src="https://media.themoviedb.org/t/p/w130_and_h195_bestv2/z3CqL2vnjgLuefOiR5AYD9Tf91S.jpg"
+                                    alt="Temporada 5">
+                                <div class="temporada">
+                                    <h3>Temporada 5</h3>
+                                    <div class="d-flex">
+                                        <span class="card-icon icon-star m-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg> 5 </span>
+                                        <span class="card-icon rubik-font-regular">2018 • 22 Episodios</span>
+                                    </div>
+                                    <div class="container-comment-text">La temporada 5 de The Flash se estrenó el 9 de octubre de 2018. <br>
+
+                                        Barry Allen y su nueva esposa, Iris West, finalmente se adaptan a la vida de casados cuando reciben la visita de Nora West-Allen, su veloz hija del futuro. La llegada de Nora saca a la luz el legado que cada miembro del Equipo Flash dejará dentro de unos años, lo que hace que muchos se pregunten quiénes son hoy. Y aunque Nora idolatra a Barry, le guarda un misterioso rencor a Iris. Mientras el Equipo Flash se adapta a la próxima generación de velocistas, descubren que la presencia de Nora ha provocado la llegada del villano más despiadado, cruel e implacable al que jamás se hayan enfrentado: ¡Cigarra!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container d-flex align-items-start mt-4">
+                                <img src="https://media.themoviedb.org/t/p/w130_and_h195_bestv2/qDntRDRs5XohN4ClcV2SH9WlzpI.jpg"
+                                    alt="Temporada 6">
+                                <div class="temporada">
+                                    <h3>Temporada 6</h3>
+                                    <div class="d-flex">
+                                        <span class="card-icon icon-star m-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+                                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg> 4 </span>
+                                        <span class="card-icon rubik-font-regular">2019 • 19 Episodios</span>
+                                    </div>
+                                    <div class="container-comment-text">La temporada 6 de The Flash se estrenó el 8 de octubre de 2019. <br>
+
+                                        Cuando Barry e Iris enfrentan la pérdida de su hija, el equipo enfrenta su mayor amenaza hasta el momento: una que amenaza con destruir toda Central City; Killer Frost tiene un roce con la muerte que cambiará su relación con Caitlin. Ante la noticia de su muerte inminente, la capacidad de recuperación de Barry se ve afectada mientras lucha por luchar contra el destino.
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 
+            <div class="container-movie">
+                
+                <div>
+
+                   
+                    </div>
+                    
+                </div>
+
+
+                
+            </div> -->
+
+        </section>
+
+
+
+        <footer class="py-2 d-flex justify-content-around align-items-center border-top pt-4 pb-4">
+            <ul class="nav col-md-4 d-flex flex-nowrap justify-content-end list-unstyled">
+                <li>
+                    <a href="https://facebook.com" title="facebook">
+                        <img src="imagenes/iconos/facebook.png" alt="logo facebook">
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://instagram.com" title="instagram">
+                        <img src="imagenes/iconos/instagram.png" alt="logo instagram">
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://youtube.com" title="youtube">
+                        <img src="imagenes/iconos/youtube.png" alt="logo youtube">
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="mailto:info@gmail.com">
+                        <img src="imagenes/iconos/email.png" alt="logo correo">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="col-md-4 d-flex justify-content-start">
+                <a class="text-decoration-none" href="terminos_y_privacidad.html">Términos y
+                    Privacidad</a>
+                <a class="ms-3 text-decoration-none" href="ayuda.html">Ayuda</a>
+            </div>
+        </footer>
+
+
+    </main>
+
+    <!-- Espacio para el javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+.container-estrenos {
+    width: 100%;
+}
+
+.carousel-inner .img-bg-carousel {
+    cursor: pointer;
+    object-fit: cover;
+    filter: brightness(45%);
+    height: 480px;
+
+}
+
+.carousel-caption img {
+    object-fit: contain;
+    width: 250px;
+}
+
+.carousel-caption {
+    right: 0 !important;
+    bottom: 1.25rem;
+    left: 0 !important;
+    text-align: left !important;
+    top: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.carousel-item.active{
+    display: flex  !important;
+}
+
+.carousel-info{
+    display: none;
+}
+
+/* For Tablets: */
+@media (min-width: 768px) {
+
+    
+    .carousel-caption img{
+        width: 250px;
+    } 
+
+    .carousel-caption {
+        width: 70%;
+        flex-wrap: nowrap;
+    }
+
+    
+
+    .carousel-info{
+        display: block;
+    }
+
+}
+
+/* For Desktop: */
+@media (min-width: 1024px) {
+    .container-estrenos {
+        width: 80%;
+    }
+
+
+ /*    .carousel-caption img {
+        width: 400px;
+    } */
+}
+
+@media (max-width: 768px) and (orientation:landscape) {
+    .carousel-inner .img-bg-carousel {
+        height: 370px;
+    }
+
+
+}

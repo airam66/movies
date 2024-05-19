@@ -1,0 +1,58 @@
+.container-home {
+    min-height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../imagenes/fondo.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.container-home_text {
+    width: 80%;
+}
+
+.home-title {
+    font-size: 1.8rem;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-style: normal;
+
+}
+
+.home-subtitle {
+    font-size: 1.1rem;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* For Tablets:*/
+@media only screen and (min-width: 768px) {
+
+    .container-home {
+        min-height: 100vh;
+        padding: 100px 0;
+    }
+
+    .container-home_text {
+        width: 70%;
+    }
+
+    .home-title {
+        font-size: 3.2rem;
+    }
+
+    .home-subtitle {
+        font-size: 1.8rem;
+    }
+
+}
+
+/* For Desktop */
+@media only screen and (min-width: 1024px) {
+    .container-home_text {
+        width: 40%;
+    }
+}

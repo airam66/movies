@@ -1,0 +1,26 @@
+.container-list-movies {}
+
+.container-list-movies p {
+    color: #000 !important;
+}
+
+.list-movies-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.list-movies-info img {
+    width: 100%;
+}
+
+.list-movies-info-text p {
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+
+.list-movies-info-text .card-icon{
+    color: rgb(247, 178, 16);
+}

@@ -1,0 +1,93 @@
+.container-movies{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap:35px;
+    width: 58%;
+    
+}
+
+.icon-star{
+    color:rgb(236, 235, 138);
+}
+
+.card-img{
+    position: relative;
+    cursor: pointer;
+  
+}
+
+
+.card-img-bookmark{
+    position: absolute;
+    top:2px;
+    right: 5px;
+    color: #fff;
+}
+
+.rounded{
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+
+}
+
+.card-data{
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    top:0;
+    bottom:0 ;
+    left:0;
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: center;
+    justify-content:end ;
+    background-image:linear-gradient(rgba(218, 184, 184, 0.1), rgb(114, 2, .2) 80%,rgb(32, 32, 32) 100%);
+    
+    clip-path: var(--clip, inset(0 0 100% 100%));
+    transition: clip-path .5s;
+}
+
+
+.card-img:hover{
+    --clip:inset(0 0 0 0);
+}
+
+
+.card-btn{
+    color:#fff;
+}
+
+ .card-title{
+    font-size: 1.4rem;
+    font-weight: bold;
+} 
+
+
+
+.card-description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+ 
+}
+
+.card-description span{
+    font-size: .9;
+}
+
+.card-icon{
+    display: flex;
+    align-items: center;
+    gap:5px;
+
+
+}

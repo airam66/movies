@@ -1,0 +1,49 @@
+footer div{
+    white-space: nowrap;
+}
+
+footer a {
+    color: #9E9E9E;
+    font-size: .9rem;
+    font-family: "Alata", sans-serif;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer img {
+    background-color: #9E9E9E;
+    padding: 2.8px;
+    border-radius: 25px;
+    width: 2rem;
+}
+
+footer img:hover {
+    background-color: #fff;
+}
+
+/* For tablets : */
+@media only screen and (min-width: 768px) {
+
+    footer a {
+        font-size: 1rem;
+    }
+
+    footer img {
+        padding: 5px;
+        width: 3rem;
+    }
+}
+
+/* para celular */
+@media (max-width: 400px) {
+    footer {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    footer div{
+        margin-top: .4rem !important;
+    }
+}

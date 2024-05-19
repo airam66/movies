@@ -1,0 +1,106 @@
+@import url("styles/menu.css");
+@import url("styles/home.css");
+@import url("styles/busqueda.css");
+@import url("styles/estrenos.css");
+@import url("styles/peliculas.css");
+@import url("styles/login.css");
+@import url("styles/footer.css");
+@import url("styles/formularios.css");
+@import url("styles/pelicula.css");
+@import url("styles/recomendadas.css");
+@import url("styles/favoritos.css");
+@import url("styles/serie.css");
+
+:root {
+    --col-de-nav: #d60000;
+    /* --col-de-btn1: #830d3a; */
+    --col-de-btn: #f29746;
+    --col-de-btn1: #f29746;
+    --col-de-btn2:  #e23d75;
+    --col-de-btn3:  #9f0202;
+    --col-de-icon-hover: #6e1e2fc7;
+    --col-de-fondo: #111111;
+    --col-de-input:#FFAD6A;
+    --col-de-link:#a3484f;
+}
+
+body {
+    background-color: var(--col-de-fondo);
+}
+
+.bg-body-tertiary {
+    background-color: var(--col-de-nav) !important;
+}
+
+/* Botones */
+.btn-outline-success {
+    background-color: var(--col-de-btn);
+    background: linear-gradient(to right, var(--col-de-btn2) 0%, var(--col-de-btn1) 0%, var(--col-de-btn3) 100%);
+    color: #fff;
+    border: 1px solid var(--col-de-btn);
+    white-space: nowrap;
+
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+   
+}
+
+
+
+.btn-outline-success:hover {
+    background: var(--col-de-btn-hover) !important;
+    border: 1px solid #f5f5f5;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* titulos secciones */
+
+.title {
+    font-size: 1.7rem;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-style: normal;
+    margin-left: 20px
+}
+
+/* inputs */
+input:focus,
+textarea:focus{
+    border:2px solid var(--col-de-input) !important;
+    box-shadow: none !important;
+}
+
+input,select{
+    background-color: #222224 !important;
+    border-radius: 50px !important;
+    border:1px solid #d8d5d5 !important;
+    color: #f5f5f5ff !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgb(197, 194, 194) !important;
+}
+
+/* label */
+label{
+    font-size: 1rem;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+
+
+/* For Tablets:*/
+@media only screen and (min-width: 768px) {
+    .title{
+        font-size: 3rem;
+    }
+
+    label{
+        font-size: 1.1;
+    }
+}

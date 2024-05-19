@@ -1,0 +1,15 @@
+.container-busqueda {
+    padding: 100px 10px;
+}
+
+.container-busqueda input {
+    background-color: #1c1a1a;
+    border-radius: 100px;
+    border: 2px solid #fff;
+    height: 50px;
+    color: #fff;
+}
+
+.container-busqueda input::placeholder {
+    color: rgb(161, 159, 159);
+}
